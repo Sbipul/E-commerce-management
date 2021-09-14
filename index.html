@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bipul_Store</title>
+  <link rel="icon" type="image/png" href="img/20210406_133909.jpg" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+  <!-- google Montserrat  font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- modal area start-->
+  <div id="modal" class="modaL"></div>
+  <!-- modal area end-->
+
+  <!-- header area start  -->
+  <header class="header">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bipul Store</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="">Order <span class="badge">42</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Inbox <span class="badge">16</span></a></li>
+
+            <li><a href="#">Profile</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- header area end  -->
+
+
+  <!-- main area start  -->
+  <main class="main">
+    <div class="container">
+      <h1 class="text-center">Get easy & everything from <span class="text-primary">#Bipul store</span></h1>
+      <div class="search-field">
+        <div class="search-box">
+          <input id="input-field" class="search-field" type="text" />
+          <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+            autocomplete="off" id="search-btn" onclick="loadProducts()">
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <!-- single card area start  -->
+        <div class="col-md-9 col-lg-9 col-sm-7">
+          <div id="all-products" class="">
+          </div>
+        </div>
+        <!-- single card area end  -->
+
+        <!-- my cart area start  -->
+        <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
+          <!-- orderConfirm mesg start -->
+          <div id="confirm-message" onclick="hideMsg()">
+            <h3 id="confirm-heading">Order Confirmed Sir <i class="fas fa-check-circle"></i></h3>
+          </div>
+          <!-- orderConfirm mesg start -->
+          <div class="cart" id="my-cart">
+            <table class="table">
+              <thead>
+                <h1>My-Cart</h1>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Total Added-Products:</th>
+                  <td> <span id="total-Products">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$ <span id="price">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Delivery-Charge:</th>
+                  <td>$ <span id="delivery-charge">20</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Total-Tax:</th>
+                  <td>$ <span id="total-tax">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Total</th>
+                  <td colspan="2">$ <span id="total">0</span></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="parces text-center">
+              <button id="buyNow" onclick="orderConfirm()" class="text-center customBtn">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- my cart area end  -->
+      </div>
+    </div>
+  </main>
+  <!-- main area end  -->
+
+
+
+  <!-- footer area start  -->
+  <footer id="footer">
+    <p>allrights reserved by bipul &copy;handro roy</p>
+  </footer>
+  <!-- footer area end  -->
+
+
+  <!-- add javascript  file  -->
+  <script src="./js/app.js"></script>
+  <script src="https://kit.fontawesome.com/b7ab4b2e5e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
